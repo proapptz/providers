@@ -100,7 +100,7 @@ async function comboScraper(ctx: ShowScrapeContext): Promise<SourcererOutput> {
 export const cinehdplusScraper = makeSourcerer({
   id: 'cinehdplus',
   name: 'CineHDPlus (Latino)',
-  rank: 914,
+  rank: 4,
   disabled: false,
   flags: [],
   scrapeShow: comboScraper,

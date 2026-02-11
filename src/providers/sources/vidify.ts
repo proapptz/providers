@@ -43,6 +43,7 @@ export const vidifyScraper = makeSourcerer({
   id: 'vidify',
   name: 'Vidify 🔥',
   rank: 204,
+  disabled: true,
   flags: [flags.CORS_ALLOWED],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,

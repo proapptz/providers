@@ -42,7 +42,7 @@ const universalScraper = async (ctx: MovieScrapeContext | ShowScrapeContext) => 
     const matches = [...showPageResult.matchAll(regexPattern)];
     const episodeIds = matches.map((match) => match[1]);
     if (episodeIds.length === 0) throw new NotFoundError('No watchable item found');
-    const episodeId = episodeIds.at(-1);
+    const episodeId = episodeIds[episodeIds.length - 1];
     iframeSourceUrl = `/episodes/${episodeId}/videos`;
   }
 
@@ -76,9 +76,10 @@ const universalScraper = async (ctx: MovieScrapeContext | ShowScrapeContext) => 
 
 export const ridooMoviesScraper = makeSourcerer({
   id: 'ridomovies',
-  name: 'RidoMovies 🦕',
-  rank: 190,
+  name: 'RidoMovies',
+  rank: 210,
   flags: [],
+  disabled: true,
   scrapeMovie: universalScraper,
-  // scrapeShow: universalScraper,
+  scrapeShow: universalScraper,
 });

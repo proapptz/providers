@@ -24,7 +24,8 @@ export const vidnestScraper = makeSourcerer({
   id: 'vidnest',
   name: 'Vidnest',
   rank: 115,
-  flags: [], // The streams cause the site to crash
+  flags: [],
+  disabled: true, // The streams cause the site to crash
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,
 });

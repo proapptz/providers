@@ -93,9 +93,9 @@ async function comboScraper(ctx: ShowScrapeContext | MovieScrapeContext): Promis
 
 export const wecimaScraper = makeSourcerer({
   id: 'wecima',
-  name: 'Wecima 🍛',
+  name: 'Wecima (Arabic)',
   rank: 3,
-  disabled: true,
+  disabled: false,
   flags: [],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,

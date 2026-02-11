@@ -35,8 +35,9 @@ async function comboScraper(ctx: ShowScrapeContext | MovieScrapeContext): Promis
 
 export const insertunitScraper = makeSourcerer({
   id: 'insertunit',
-  name: 'Insertunit 🌍',
+  name: 'Insertunit',
   rank: 12,
+  disabled: true,
   flags: [flags.CORS_ALLOWED, flags.IP_LOCKED],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,
