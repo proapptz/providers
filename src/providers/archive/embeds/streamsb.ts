@@ -65,7 +65,6 @@ export const streamsbScraper = makeEmbed({
   id: 'streamsb',
   name: 'StreamSB',
   rank: 150,
-  flags: [flags.CORS_ALLOWED],
   async scrape(ctx) {
     const streamsbUrl = ctx.url.replace('.html', '').replace('embed-', '').replace('e/', '').replace('d/', '');
     const parsedUrl = new URL(streamsbUrl);

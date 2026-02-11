@@ -7,7 +7,6 @@ export type MetaOutput = {
   id: string;
   rank: number;
   name: string;
-  flags?: string[];
   mediaTypes?: Array<MediaTypes>;
 };
 
@@ -20,7 +19,6 @@ function formatSourceMeta(v: Sourcerer): MetaOutput {
     id: v.id,
     rank: v.rank,
     name: v.name,
-    flags: v.flags,
     mediaTypes: types,
   };
 }
@@ -31,7 +29,6 @@ function formatEmbedMeta(v: Embed): MetaOutput {
     id: v.id,
     rank: v.rank,
     name: v.name,
-    flags: v.flags,
   };
 }
 

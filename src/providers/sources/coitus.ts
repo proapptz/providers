@@ -17,8 +17,6 @@ async function comboScraper(ctx: ShowScrapeContext | MovieScrapeContext): Promis
   if (!apiRes.videoSource) throw new NotFoundError('No watchable item found');
 
   let processedUrl = apiRes.videoSource;
-  let streamHeaders: Record<string, string> = {};
-
   if (processedUrl.includes('orbitproxy')) {
     try {
       const urlParts = processedUrl.split(/orbitproxy\.[^/]+\//);
@@ -33,8 +31,8 @@ async function comboScraper(ctx: ShowScrapeContext | MovieScrapeContext): Promis
           const originalUrl = jsonData.u;
           const referer = jsonData.r || '';
 
-          streamHeaders = { referer };
-          processedUrl = createM3U8ProxyUrl(originalUrl, ctx.features, streamHeaders);
+          const headers = { referer };
+          processedUrl = createM3U8ProxyUrl(originalUrl, headers);
         } catch (jsonError) {
           console.error('Error decoding/parsing orbitproxy data:', jsonError);
         }
@@ -56,7 +54,6 @@ async function comboScraper(ctx: ShowScrapeContext | MovieScrapeContext): Promis
         captions: [],
         playlist: processedUrl,
         type: 'hls',
-        headers: streamHeaders,
         flags: [flags.CORS_ALLOWED],
       },
     ],
@@ -65,8 +62,9 @@ async function comboScraper(ctx: ShowScrapeContext | MovieScrapeContext): Promis
 
 export const coitusScraper = makeSourcerer({
   id: 'coitus',
-  name: 'Autoembed+',
+  name: 'Cactus 🌵',
   rank: 91,
+  disabled: true,
   flags: [flags.CORS_ALLOWED],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,

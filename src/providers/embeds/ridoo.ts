@@ -5,16 +5,10 @@ import { makeEmbed } from '../base';
 
 const referer = 'https://ridomovies.tv/';
 
-const playlistHeaders = {
-  referer: 'https://ridoo.net/',
-  origin: 'https://ridoo.net',
-};
-
 export const ridooScraper = makeEmbed({
   id: 'ridoo',
   name: 'Ridoo',
-  rank: 121,
-  flags: [flags.CORS_ALLOWED],
+  rank: 105,
   async scrape(ctx) {
     const res = await ctx.proxiedFetcher<string>(ctx.url, {
       headers: {
@@ -31,7 +25,6 @@ export const ridooScraper = makeEmbed({
           id: 'primary',
           type: 'hls',
           playlist: url,
-          headers: playlistHeaders,
           captions: [],
           flags: [flags.CORS_ALLOWED],
         },

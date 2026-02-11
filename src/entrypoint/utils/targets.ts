@@ -13,10 +13,6 @@ export const flags = {
   // Streams and sources with this flag wont be proxied
   // And will be exclusive to the extension
   PROXY_BLOCKED: 'proxy-blocked',
-
-  // The stream is MKV format and requires a player that supports it.
-  // Most browsers cannot play MKV; native/desktop/mobile apps with proper players can.
-  MKV_REQUIRED: 'mkv-required',
 } as const;
 
 export type Flags = (typeof flags)[keyof typeof flags];
@@ -45,11 +41,11 @@ export type FeatureMap = {
 export const targetToFeatures: Record<Targets, FeatureMap> = {
   browser: {
     requires: [flags.CORS_ALLOWED],
-    disallowed: [flags.MKV_REQUIRED],
+    disallowed: [],
   },
   'browser-extension': {
     requires: [],
-    disallowed: [flags.MKV_REQUIRED],
+    disallowed: [],
   },
   native: {
     requires: [],
@@ -57,7 +53,7 @@ export const targetToFeatures: Record<Targets, FeatureMap> = {
   },
   any: {
     requires: [],
-    disallowed: [flags.MKV_REQUIRED],
+    disallowed: [],
   },
 };
 

@@ -12,22 +12,9 @@ export async function convertPlaylistsToDataUrls(
   const playlist = parse(playlistData);
 
   if (playlist.isMasterPlaylist) {
-    // Extract base URL from the playlist URL for resolving relative variant URLs
-    const baseUrl = new URL(playlistUrl).origin;
-
     await Promise.all(
       (playlist as MasterPlaylist).variants.map(async (variant) => {
-        // Resolve relative URLs against the base URL
-        let variantUrl = variant.uri;
-        if (!variantUrl.startsWith('http')) {
-          // Handle relative URLs - add leading slash if it doesn't exist
-          if (!variantUrl.startsWith('/')) {
-            variantUrl = `/${variantUrl}`;
-          }
-          variantUrl = baseUrl + variantUrl;
-        }
-
-        const variantPlaylistData = await fetcher(variantUrl, { headers });
+        const variantPlaylistData = await fetcher(variant.uri, { headers });
         const variantPlaylist = parse(variantPlaylistData);
         variant.uri = `data:application/vnd.apple.mpegurl;base64,${btoa(stringify(variantPlaylist))}`;
       }),

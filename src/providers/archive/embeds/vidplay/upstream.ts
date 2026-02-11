@@ -10,7 +10,6 @@ export const upstreamScraper = makeEmbed({
   id: 'upstream',
   name: 'UpStream',
   rank: 199,
-  flags: [flags.CORS_ALLOWED],
   async scrape(ctx) {
     // Example url: https://upstream.to/embed-omscqgn6jc8r.html
     const streamRes = await ctx.proxiedFetcher<string>(ctx.url);

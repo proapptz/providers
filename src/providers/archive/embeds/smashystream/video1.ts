@@ -24,7 +24,6 @@ export const smashyStreamFScraper = makeEmbed({
   id: 'smashystream-f',
   name: 'SmashyStream (F)',
   rank: 71,
-  flags: [],
   async scrape(ctx) {
     const res = await ctx.proxiedFetcher<FPlayerResponse>(ctx.url, {
       headers: {

@@ -9,7 +9,7 @@ async function consumetScraper(ctx: ShowScrapeContext): Promise<SourcererOutput>
   const searchQuery = ctx.media.title;
   const page = 1;
 
-  const searchUrl = `https://api.1anime.app/anime/zoro/${encodeURIComponent(searchQuery)}?page=${page}`;
+  const searchUrl = `https://cors.samj.app/?destination=https://consumet.pstream.org/anime/zoro/${encodeURIComponent(searchQuery)}?page=${page}`;
   const searchResponse = await ctx.fetcher<SearchResponse>(searchUrl);
 
   if (!searchResponse?.results?.length) {
@@ -21,7 +21,7 @@ async function consumetScraper(ctx: ShowScrapeContext): Promise<SourcererOutput>
     searchResponse.results[0];
 
   // Get episode list
-  const infoUrl = `https://api.1anime.app/anime/zoro/info?id=${bestMatch.id}`;
+  const infoUrl = `https://consumet.pstream.org/anime/zoro/info?id=${bestMatch.id}`;
   const infoResponse = await ctx.fetcher<InfoResponse>(infoUrl);
 
   if (!infoResponse?.episodes?.length) {
@@ -65,8 +65,9 @@ async function consumetScraper(ctx: ShowScrapeContext): Promise<SourcererOutput>
 
 export const ConsumetScraper = makeSourcerer({
   id: 'consumet',
-  name: 'Consumet (Anime) 🔥',
-  rank: 5,
+  name: 'Consumet (Anime) 🔰',
+  rank: 4,
+  disabled: true,
   flags: [flags.CORS_ALLOWED],
   scrapeShow: consumetScraper,
 });

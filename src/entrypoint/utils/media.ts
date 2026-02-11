@@ -16,8 +16,6 @@ export type ShowMedia = CommonMedia & {
   season: {
     number: number;
     tmdbId: string;
-    title: string;
-    episodeCount?: number;
   };
 };
 

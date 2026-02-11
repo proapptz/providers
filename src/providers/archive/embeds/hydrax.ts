@@ -5,7 +5,6 @@ export const hydraxScraper = makeEmbed({
   name: 'Hydrax',
   rank: 250,
   disabled: true,
-  flags: [],
   async scrape(ctx) {
     // ex-url: https://hihihaha1.xyz/?v=Lgd2uuuTS7
     const embed = await ctx.proxiedFetcher<string>(ctx.url);

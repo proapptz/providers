@@ -8,7 +8,6 @@ export const smashyStreamOScraper = makeEmbed({
   id: 'smashystream-o',
   name: 'SmashyStream (O)',
   rank: 70,
-  flags: [],
   async scrape(ctx) {
     const result = await smashyStreamFScraper.scrape(ctx);
     return {

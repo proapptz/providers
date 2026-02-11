@@ -33,22 +33,11 @@ interface StreamData {
   source: string;
 }
 
-const getUserToken = (): string | null => {
-  try {
-    return typeof window !== 'undefined' ? window.localStorage.getItem('febbox_ui_token') : null;
-  } catch (e) {
-    console.warn('Unable to access localStorage:', e);
-    return null;
-  }
-};
-
 async function comboScraper(ctx: ShowScrapeContext | MovieScrapeContext): Promise<SourcererOutput> {
-  const userToken = getUserToken();
-
   const apiUrl =
     ctx.media.type === 'movie'
-      ? `${mamaApiBase}/movie/${ctx.media.tmdbId}?token=${userToken}`
-      : `${mamaApiBase}/tv/${ctx.media.tmdbId}?season=${ctx.media.season.number}&episode=${ctx.media.episode.number}&token=${userToken}`;
+      ? `${mamaApiBase}/movie/${ctx.media.tmdbId}`
+      : `${mamaApiBase}/tv/${ctx.media.tmdbId}?season=${ctx.media.season.number}&episode=${ctx.media.episode.number}`;
 
   const apiRes = await ctx.proxiedFetcher(apiUrl);
 
@@ -138,10 +127,9 @@ async function comboScraper(ctx: ShowScrapeContext | MovieScrapeContext): Promis
 
 export const nunflixScraper = makeSourcerer({
   id: 'nunflix',
-  name: 'NFlix',
-  rank: 155,
-  disabled: !getUserToken(),
-  // disabled: true,
+  name: 'NFLX-4K 🪿',
+  rank: 4,
+  disabled: true,
   flags: [flags.CORS_ALLOWED],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,
