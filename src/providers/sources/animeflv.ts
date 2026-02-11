@@ -194,7 +194,6 @@ export const animeflvScraper = makeSourcerer({
   id: 'animeflv',
   name: 'AnimeFLV',
   rank: 90,
-  disabled: false,
   flags: [flags.CORS_ALLOWED],
   scrapeShow: comboScraper,
   scrapeMovie: comboScraper,
