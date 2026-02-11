@@ -208,7 +208,7 @@ async function comboScraper(ctx: MovieScrapeContext | ShowScrapeContext): Promis
 export const zoechipScraper = makeSourcerer({
   id: 'zoechip',
   name: 'ZoeChip',
-  rank: 170,
+  rank: 9170,
   flags: [],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,

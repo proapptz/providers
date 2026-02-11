@@ -47,7 +47,7 @@ async function getEmbeds(id: string, servers: string, ctx: ScrapeContext): Promi
 export const warezcdnScraper = makeSourcerer({
   id: 'warezcdn',
   name: 'WarezCDN',
-  rank: 115,
+  rank: 9115,
   flags: [],
   scrapeMovie: async (ctx) => {
     if (!ctx.media.imdbId) throw new NotFoundError('This source requires IMDB id.');
