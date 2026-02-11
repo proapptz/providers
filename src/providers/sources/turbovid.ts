@@ -23,7 +23,6 @@ export const turbovidSourceScraper = makeSourcerer({
   id: 'turbovidSource',
   name: 'TurboVid',
   rank: 120,
-  disabled: true,
   flags: [flags.CORS_ALLOWED],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,

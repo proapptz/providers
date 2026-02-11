@@ -67,7 +67,6 @@ export const coitusScraper = makeSourcerer({
   id: 'coitus',
   name: 'Autoembed+',
   rank: 91,
-  disabled: true,
   flags: [flags.CORS_ALLOWED],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,

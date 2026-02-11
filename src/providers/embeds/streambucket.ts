@@ -10,7 +10,6 @@ export const streambucketScraper = makeEmbed({
   id: 'streambucket',
   name: 'Streambucket',
   rank: 220,
-  disabled: true,
   flags: [flags.CORS_ALLOWED],
   async scrape(ctx: EmbedScrapeContext) {
     // Handle redirects for multiembed/streambucket URLs

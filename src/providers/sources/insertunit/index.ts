@@ -37,7 +37,6 @@ export const insertunitScraper = makeSourcerer({
   id: 'insertunit',
   name: 'Insertunit',
   rank: 12,
-  disabled: true,
   flags: [flags.CORS_ALLOWED, flags.IP_LOCKED],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,

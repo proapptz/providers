@@ -43,7 +43,6 @@ export const vidapiClickScraper = makeSourcerer({
   id: 'vidapi-click',
   name: 'vidapi.click',
   rank: 89,
-  disabled: true,
   flags: [flags.CORS_ALLOWED],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,

@@ -139,8 +139,7 @@ const universalScraper = async (ctx: MovieScrapeContext): Promise<SourcererOutpu
 export const myanimeScraper = makeSourcerer({
   id: 'myanime',
   name: 'MyAnime',
-  rank: 113,
-  disabled: true, // disabled since AI api is not privated
+  rank: 113, // disabled since AI api is not privated
   flags: [flags.CORS_ALLOWED],
   scrapeMovie: universalScraper,
   scrapeShow: showScraper,

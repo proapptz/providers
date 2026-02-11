@@ -65,7 +65,6 @@ export const slidemoviesScraper = makeSourcerer({
   id: 'slidemovies',
   name: 'SlideMovies',
   rank: 135,
-  disabled: true,
   flags: [flags.CORS_ALLOWED],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,
