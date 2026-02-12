@@ -48,7 +48,7 @@ export const warezcdnScraper = makeSourcerer({
   id: 'warezcdn',
   name: 'WarezCDN',
   // disabled: true,
-  rank: 115,
+  rank: 1150,
   flags: [],
   scrapeMovie: async (ctx) => {
     if (!ctx.media.imdbId) throw new NotFoundError('This source requires IMDB id.');
