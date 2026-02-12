@@ -4,7 +4,8 @@ import { SourcererEmbed, SourcererOutput, makeSourcerer } from '@/providers/base
 import { MovieScrapeContext, ShowScrapeContext } from '@/utils/context';
 import { NotFoundError } from '@/utils/errors';
 
-const apiUrl = 'https://tom.autoembed.cc';
+const apiUrl = 'https://test.autoembed.cc';
+// const apiUrl = 'https://tom.autoembed.cc';
 // const baseUrl = 'https://watch.autoembed.cc';
 
 async function comboScraper(ctx: ShowScrapeContext | MovieScrapeContext): Promise<SourcererOutput> {
