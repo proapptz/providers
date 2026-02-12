@@ -98,7 +98,7 @@ const CINEMAOS_SERVERS = [
   //   'kage',
 ];
 
-export const cinemaosEmbeds = CINEMAOS_SERVERS.map((server, i) => makeCinemaOSEmbed(server, 300 - i));
+export const cinemaosEmbeds = CINEMAOS_SERVERS.map((server, i) => makeCinemaOSEmbed(server, 8300 - i));
 
 export function makeCinemaOSHexaEmbed(id: string, rank: number = 100) {
   return makeEmbed({
