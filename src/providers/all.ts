@@ -100,11 +100,13 @@ import { uiraliveScraper } from './sources/uiralive';
 
 import { vidsrcsuScraper } from './archive/sources/vidsrcsu';
 import { vidSrcToScraper } from './archive/sources/vidsrcto/index';
+import { vixsrcSourceScraper } from './sources/vixsrc';
 
 
 export function gatherAllSources(): Array<Sourcerer> {
   // all sources are gathered here
   return [
+    vixsrcSourceScraper,
     vidSrcToScraper,
     vidsrcsuScraper,
     fsOnlineScraper,
