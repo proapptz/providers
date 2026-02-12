@@ -31,7 +31,7 @@ const sourceCDisabled = makeSourcerer({
   id: 'c',
   name: 'C',
   rank: 3,
-  disabled: true,
+  // disabled: true,
   flags: [],
 });
 const sourceAHigherRank = makeSourcerer({
@@ -84,7 +84,7 @@ const embedA = makeEmbed({
 const embedEDisabled = makeEmbed({
   id: 'e',
   rank: 6,
-  disabled: true,
+  // disabled: true,
 } as any);
 const embedDHigherRank = makeEmbed({
   id: 'd',

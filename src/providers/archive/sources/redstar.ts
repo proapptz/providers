@@ -35,7 +35,7 @@ const universalScraper = async (ctx: ShowScrapeContext | MovieScrapeContext): Pr
 export const redStarScraper = makeSourcerer({
   id: 'redstar',
   name: 'redStar',
-  disabled: true,
+  // disabled: true,
   externalSource: true,
   rank: 280,
   flags: [flags.CORS_ALLOWED],

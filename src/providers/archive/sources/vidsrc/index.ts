@@ -6,7 +6,7 @@
 //   id: 'vidsrc',
 //   name: 'VidSrc',
 //   rank: 116,
-//   disabled: true,
+//   // disabled: true,
 //   flags: [],
 //   scrapeMovie,
 //   scrapeShow,

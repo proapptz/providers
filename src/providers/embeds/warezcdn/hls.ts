@@ -22,7 +22,7 @@ export const warezcdnembedHlsScraper = makeEmbed({
   id: 'warezcdnembedhls', // WarezCDN is both a source and an embed host
   name: 'WarezCDN HLS',
   // method no longer works
-  disabled: true,
+  // disabled: true,
   rank: 83,
   flags: [flags.IP_LOCKED],
   async scrape(ctx) {

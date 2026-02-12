@@ -34,7 +34,7 @@ export const roverScraper = makeSourcerer({
   id: 'rover',
   name: 'Rover',
   rank: 189,
-  disabled: true,
+  // disabled: true,
   flags: [flags.CORS_ALLOWED],
   scrapeMovie: comboScraper,
   scrapeShow: comboScraper,

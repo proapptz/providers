@@ -15,7 +15,7 @@
 //   id: 'febbox-hls',
 //   name: 'Febbox (HLS)',
 //   rank: 160,
-//   disabled: true,
+//   // disabled: true,
 //   async scrape(ctx) {
 //     const { type, id, season, episode } = parseInputUrl(ctx.url);
 //     const sharelinkResult = await ctx.proxiedFetcher<{

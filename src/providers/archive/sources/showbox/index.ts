@@ -42,7 +42,7 @@
 //   id: 'showbox',
 //   name: 'Showbox',
 //   rank: 250,
-//   disabled: true,
+//   // disabled: true,
 //   flags: [flags.CORS_ALLOWED, flags.CF_BLOCKED],
 //   scrapeShow: comboScraper,
 //   scrapeMovie: comboScraper,

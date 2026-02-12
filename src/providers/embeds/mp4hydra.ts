@@ -12,7 +12,7 @@ const providers = [
     id: 'mp4hydra-2',
     name: 'MP4Hydra Server 2',
     rank: 35,
-    disabled: true,
+    // disabled: true,
   },
 ];
 
@@ -20,7 +20,7 @@ function embed(provider: { id: string; name: string; rank: number; disabled?: bo
   return makeEmbed({
     id: provider.id,
     name: provider.name,
-    disabled: true,
+    // disabled: true,
     rank: provider.rank,
     flags: [flags.CORS_ALLOWED],
     async scrape(ctx) {

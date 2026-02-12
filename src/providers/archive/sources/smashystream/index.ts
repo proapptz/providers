@@ -31,7 +31,7 @@
 //   id: 'smashystream',
 //   name: 'SmashyStream',
 //   rank: 20,
-//   disabled: true,
+//   // disabled: true,
 //   flags: [flags.CORS_ALLOWED],
 //   scrapeMovie: universalScraper,
 //   scrapeShow: universalScraper,

@@ -11,7 +11,7 @@
 //   name: 'FlixHQ',
 //   rank: 229,
 //   flags: [flags.CORS_ALLOWED],
-//   disabled: true,
+//   // disabled: true,
 //   async scrapeMovie(ctx) {
 //     const id = await getFlixhqId(ctx, ctx.media);
 //     if (!id) throw new NotFoundError('no search results match');

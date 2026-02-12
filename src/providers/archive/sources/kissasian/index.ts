@@ -14,7 +14,7 @@
 //   name: 'KissAsian',
 //   rank: 40,
 //   flags: [flags.CORS_ALLOWED],
-//   disabled: true,
+//   // disabled: true,
 
 //   async scrapeShow(ctx) {
 //     const seasonNumber = ctx.media.season.number;

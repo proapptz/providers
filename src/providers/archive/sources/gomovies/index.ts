@@ -18,7 +18,7 @@
 //   id: 'gomovies',
 //   name: 'GOmovies',
 //   rank: 50,
-//   disabled: true,
+//   // disabled: true,
 //   flags: [flags.CORS_ALLOWED],
 //   async scrapeShow(ctx) {
 //     const search = await ctx.proxiedFetcher(`/search/${ctx.media.title.replaceAll(/[^a-z0-9A-Z]/g, '-')}`, {

@@ -7,7 +7,7 @@ export const viperScraper = makeEmbed({
   id: 'viper',
   name: 'Viper',
   rank: 182,
-  disabled: true,
+  // disabled: true,
   flags: [flags.CORS_ALLOWED],
   async scrape(ctx) {
     const apiResponse = await ctx.proxiedFetcher.full<{

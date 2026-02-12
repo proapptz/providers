@@ -38,7 +38,7 @@ export const whvxScraper = makeSourcerer({
   id: 'whvx',
   name: 'VidBinge',
   rank: 270,
-  disabled: true,
+  // disabled: true,
   externalSource: true,
   flags: [flags.CORS_ALLOWED],
   scrapeMovie: comboScraper,

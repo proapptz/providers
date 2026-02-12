@@ -4,7 +4,7 @@ export const hydraxScraper = makeEmbed({
   id: 'hydrax',
   name: 'Hydrax',
   rank: 250,
-  disabled: true,
+  // disabled: true,
   flags: [],
   async scrape(ctx) {
     // ex-url: https://hihihaha1.xyz/?v=Lgd2uuuTS7
