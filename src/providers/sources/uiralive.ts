@@ -4,7 +4,9 @@ import { MovieScrapeContext, ShowScrapeContext } from '@/utils/context';
 import { NotFoundError } from '@/utils/errors';
 
 // thanks uira for this api!
-const baseUrl = 'https://xj4h5qk3tf7v2mlr9s.uira.live/';
+// const baseUrl = 'https://xj4h5qk3tf7v2mlr9s.uira.live/';
+
+const baseUrl = 'https://pasmells.uira.live/';
 
 async function comboScraper(ctx: ShowScrapeContext | MovieScrapeContext): Promise<SourcererOutput> {
   const fetchUrl = `${baseUrl}all/${ctx.media.tmdbId}${

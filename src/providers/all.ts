@@ -97,9 +97,16 @@ import { wecimaScraper } from './sources/wecima';
 import { zunimeScraper } from './sources/zunime';
 import { uiraliveScraper } from './sources/uiralive';
 
+
+import { vidsrcsuScraper } from './archive/sources/vidsrcsu';
+import { vidSrcToScraper } from './archive/sources/vidsrcto/index';
+
+
 export function gatherAllSources(): Array<Sourcerer> {
   // all sources are gathered here
   return [
+    vidSrcToScraper,
+    vidsrcsuScraper,
     fsOnlineScraper,
     dopeboxScraper,
     cuevana3Scraper,
